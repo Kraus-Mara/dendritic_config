@@ -16,7 +16,6 @@ Skeleton to match the dendritic pattern in my NixOS config
 │   └── home
 │       └── default.nix
 └── README.md
-
 ```
 
 ```
