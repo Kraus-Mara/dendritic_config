@@ -12,7 +12,7 @@
 
       imports = [ # Simply put your hardware-configuration.nix in the parts/ folder then complete the config.nix skeleton
         ./parts/config.nix
-	./parts/hardware-configuration.nix
+	./parts/system.nix # Here's the dotNix file that will import hardware-configuration.nix
       ];
 
       flake = {};
