@@ -5,21 +5,21 @@ Skeleton to match the dendritic pattern in my NixOS config
 ### Ideal structure (established by myself ofc) : 
 
 generated with 
-```bash
-lsd --tree --icon never
-```
 ```
 .
+├── dentrix.nix
 ├── flake.nix
 ├── modules
 │   ├── core
+│   │   └── default.nix
+│   ├── hardware
+│   │   └── hardware-configuration.nix
 │   └── home
-├── parts
-│   ├── config.nix
-│   ├── hardware-configuration.nix
-│   └── system.nix
+│       └── default.nix
 └── README.md
+
 ```
 
-
-- Mara des Woods yeye
+```
+ Mara des Woods yeye
+```
