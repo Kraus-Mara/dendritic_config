@@ -8,6 +8,7 @@ Ideal structure (established by myself ofc) :
 ```bash
 lsd --tree --icon never
 ```
+```
 .
 ├── flake.nix
 ├── modules
@@ -18,7 +19,7 @@ lsd --tree --icon never
 │   ├── hardware-configuration.nix
 │   └── system.nix
 └── README.md
-                                              ___
+```
 
 
 - Mara des Woods yeye
