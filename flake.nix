@@ -1,18 +1,8 @@
-# flake skeleton
+# Taken from vic : https://github.com/vic/dendrix/blob/main/flake.nix
 {
-  description = "";
-  inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/pkgs-unstable";
-    home-manager.url = "github:nix-community/home-manager";
-    flake-parts.url = "github:hercules-ci/flake-parts";
-  };
-
-  outputs = inputs@{flake-parts, ...}:
-    flake-parts.lib.mkFlake { inherit inputs; } {
-      systems = [ "x86_64_linux" ];
-
-      imports = [
-        ./dentrix.nix
-      ];
-    };
+  outputs = inputs: import ./. inputs;
+  inputs.import-tree.url = "github:vic/import-tree";
+  inputs.nixpkgs-lib.url = "github:nix-community/nixpkgs.lib";
+  # I think the explaination about nixpkgs-lib is that we can load lib without loading pkgs. 
+  # Loading nixos-unstable / stable-XX would be too heavy and slow compared to this.
 }

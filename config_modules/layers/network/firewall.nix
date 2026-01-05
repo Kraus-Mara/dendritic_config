@@ -1,0 +1,4 @@
+{ _ }:
+{
+  firewall.enable = true;
+}
