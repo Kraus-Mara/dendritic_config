@@ -6,22 +6,52 @@ Skeleton to match the dendritic pattern in my NixOS config
 
 ### Ideal structure (established by myself ofc) :
 
-(generated with lsd --tree --icon never)
+(generated with lsd --tree --icon never or lst ;^) )
 
 ```
 .
-├── dentrix.nix
+├── config_modules
+│   └── layers
+│       ├── bootloader
+│       │   ├── filesystems.nix
+│       │   ├── kernel.nix
+│       │   └── systemd-boot.nix
+│       ├── default
+│       ├── hardware
+│       │   ├── cpu.nix
+│       │   ├── firmware.nix
+│       │   └── graphics.nix
+│       ├── network
+│       │   ├── firewall.nix
+│       │   ├── manager.nix
+│       │   ├── servers.nix
+│       │   ├── TCP.nix
+│       │   └── UDP.nix
+│       ├── options.nix
+│       ├── pipewire
+│       │   ├── pipewire.nix
+│       │   └── pulseaudio.nix
+│       ├── programs
+│       │   ├── fish.nix
+│       │   └── programs.nix
+│       ├── security
+│       │   └── security.nix
+│       ├── system
+│       │   ├── nix-settings.nix
+│       │   ├── nixpkgs.nix
+│       │   ├── time_zone.nix
+│       │   └── version.nix
+│       └── user
+│           ├── home-manager.nix
+│           ├── shell.nix
+│           └── user-base.nix
+├── default.nix
 ├── flake.nix
-├── modules
-│   ├── core
-│   │   └── default.nix
-│   ├── hardware
-│   │   └── hardware-configuration.nix
-│   └── home
-│       └── default.nix
 └── README.md
+
 ```
 
 ```
- Mara des Woods yeye
+Mara des Woods yeye
+
 ```
