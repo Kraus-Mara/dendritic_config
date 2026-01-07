@@ -16,7 +16,6 @@ Skeleton to match the dendritic pattern in my NixOS config
 │       │   ├── filesystems.nix
 │       │   ├── kernel.nix
 │       │   └── systemd-boot.nix
-│       ├── default
 │       ├── hardware
 │       │   ├── cpu.nix
 │       │   ├── firmware.nix
