@@ -11,46 +11,39 @@ Skeleton to match the dendritic pattern in my NixOS config
 ```
 .
 ├── config_modules
+│   ├── home
+│   │   ├── gui
+│   │   ├── hyprland
+│   │   ├── mainApps
+│   │   ├── others
+│   │   ├── scripts
+│   │   │   ├── scripts
+│   │   │   └── scripts.nix
+│   │   ├── shell
+│   │   ├── tty.nix
+│   │   └── utils
 │   └── layers
 │       ├── bootloader
-│       │   ├── filesystems.nix
-│       │   ├── kernel.nix
-│       │   └── systemd-boot.nix
 │       ├── hardware
-│       │   ├── cpu.nix
-│       │   ├── firmware.nix
-│       │   └── graphics.nix
 │       ├── network
-│       │   ├── firewall.nix
-│       │   ├── manager.nix
-│       │   ├── servers.nix
-│       │   ├── TCP.nix
-│       │   └── UDP.nix
 │       ├── options.nix
 │       ├── pipewire
-│       │   ├── pipewire.nix
-│       │   └── pulseaudio.nix
 │       ├── programs
-│       │   ├── fish.nix
-│       │   └── programs.nix
 │       ├── security
-│       │   └── security.nix
+│       ├── steam
 │       ├── system
-│       │   ├── nix-settings.nix
-│       │   ├── nixpkgs.nix
-│       │   ├── time_zone.nix
 │       │   └── version.nix
-│       └── user
-│           ├── home-manager.nix
-│           ├── shell.nix
-│           └── user-base.nix
+│       ├── user
+│       │   ├── home-manager.nix
+│       ├── virtualization
+│       ├── wayland
+│       └── xserver
 ├── default.nix
 ├── flake.nix
-└── README.md
-
 ```
 
-```
 Mara des Woods yeye
+
+```
 
 ```
