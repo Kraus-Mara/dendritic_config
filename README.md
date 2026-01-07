@@ -1,3 +1,7 @@
+<p align="right">
+  <a href="https://vic.github.io/dendrix/Dendritic-Ecosystem.html#vics-dendritic-libraries"> <img src="https://img.shields.io/badge/Dendritic-Nix-informational?logo=nixos&logoColor=white" alt="Dendritic Nix"/> </a>
+</p>
+
 # Work in progress
 
 https://github.com/mightyiam/dendritic
