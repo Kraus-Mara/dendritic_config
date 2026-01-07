@@ -1,17 +1,9 @@
 inputs:
 let
   inherit (inputs.nixpkgs-lib) lib;
-
-  dendrix =
-    layers // { inherit sources; }; # add // community if you need
-
-  sources = import ./config_modules/home;
-
-  # community = lib.mapAttrs (_: r: r.import-tree) ev.config.dendrix.community;
-  layers = ev.config.dendrix.layers;
+  inherit (ev.config.dendrix) layers;
 
   module = inputs.import-tree [
-    # ./config_modules/community
     ./config_modules/layers/options.nix
   ];
 
@@ -21,4 +13,4 @@ let
     specialArgs = { inherit inputs; };
   };
 in
-dendrix
+layers
