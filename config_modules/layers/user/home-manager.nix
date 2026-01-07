@@ -9,7 +9,7 @@
       inherit inputs username;
     };
     users.${username} = {
-      imports = [ inputs.import-tree ../../home ]; # Import the dotfiles
+      imports = [ inputs.import-tree ../../home ]; # Import recursively :)))))
       home = {
         username = "${username}";
         homeDirectory = "/home/${username}";
