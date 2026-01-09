@@ -1,16 +1,19 @@
 inputs:
 let
+  # lib allows to access evalModules
   inherit (inputs.nixpkgs-lib) lib;
-  inherit (ev.config.dendrix) layers;
 
-  module = inputs.import-tree [
+  # so, evaluated layers :
+  inherit (ev.config.layers_modules) evaluated_layers;
+
+  # non-evaluated module here
+  layers_modules = inputs.import-tree [
     ./config_modules/layers/options.nix
   ];
-
+  # ev allows ev.module to evaluate the given module
   ev = lib.modules.evalModules {
-    # We're asking to evaluate the modules imported from import-tree
-    modules = [ module ];
+    modules = [ layers_modules ];
     specialArgs = { inherit inputs; };
   };
 in
-layers
+evaluated_layers

@@ -2,7 +2,7 @@
 let
 
   layersOption = lib.mkOption {
-    description = "layers flake-parts modules";
+    description = "layers are the core modules of the config";
     default = discoverLayers;
     readOnly = true;
     type = lib.types.attrsOf lib.types.attrs;
@@ -25,5 +25,6 @@ let
 
 in
 {
-  options.dendrix.layers = layersOption;
+  # Selected options
+  options.evaluated_layers = layersOption;
 }
